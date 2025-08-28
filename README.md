@@ -21,8 +21,8 @@ Smooth transitions, animated tab slider, glassmorphism effects, and responsive d
 .
 ├── index.html # Main HTML file
 ├── scss/
-│ └── styles.scss # SCSS source (tidy, structured)
-├── public/
+│ └── main.scss # SCSS source (tidy, structured)
+├── src/
 │ └── styles.css # Compiled CSS output
 └── README.md
 
