@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auth — Welcome to the Future</title>
+    <link rel="stylesheet" href="src/styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header class="hero">
+        <h1>Welcome to the <span class="accent">Future</span></h1>
+        <p>Experience seamless authentication with our cutting-edge platform designed for the modern world</p>
+    </header>
+
+    <!-- Card -->
+    <section class="card">
+        <!-- Radio tabs -->
+        <input type="radio" name="tab" id="tab-signin" checked>
+        <input type="radio" name="tab" id="tab-signup">
+
+        <div class="tabs">
+            <span class="tabs__slider" aria-hidden="true"></span>
+            <label for="tab-signin"><i class="fa-solid fa-right-to-bracket ico"></i>Sign In</label>
+            <label for="tab-signup"><i class="fa-regular fa-user ico"></i>Sign Up</label>
+        </div>
+
+        <div class="panel-wrap">
+            <!-- VIEWS WRAPPER (animates height) -->
+            <div class="views" id="views">
+
+                <!-- ============== SIGN IN VIEW ============== -->
+                <div class="view view-signin active" id="view-signin">
+                    <div class="form panel signin" aria-labelledby="tab-signin">
+                        <aside class="social">
+                            <h3>Welcome Back!</h3>
+                            <p class="helper">Sign in to continue your journey</p>
+
+                            <button class="btn-social btn-google">
+                                <span class="logo"><i class="fa-brands fa-google"></i></span>
+                                Continue with Google
+                            </button>
+
+                            <button class="btn-social btn-facebook">
+                                <span class="logo"><i class="fa-brands fa-facebook-f"></i></span>
+                                Continue with Facebook
+                            </button>
+
+                            <button class="btn-social btn-apple">
+                                <span class="logo"><i class="fa-brands fa-apple"></i></span>
+                                Continue with Apple
+                            </button>
+
+                            <div class="divider">or</div>
+                        </aside>
+
+                        <div class="sign-in-side">
+                            <div class="row">
+                                <div class="input">
+                                    <label for="email-s">Email</label>
+                                    <i class="fa-regular fa-envelope"></i>
+                                    <input name="email-s" type="email" placeholder="you@gmail.com"
+                                        aria-label="Email Address">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input">
+                                    <label for="pass-s">Password</label>
+                                    <i class="fa-solid fa-lock"></i>
+                                    <input name="pass-s" type="password" placeholder="Enter your password"
+                                        aria-label="Password">
+                                </div>
+                            </div>
+
+                            <div class="meta">
+                                <label class="remember">
+                                    <input type="checkbox"> <span style="margin-left:6px">Remember me</span>
+                                </label>
+                                <a href="#">Forgot Password?</a>
+                            </div>
+
+                            <button class="btn-primary">Sign In</button>
+
+                            <p class="small-note">Don’t have an account?
+                                <a href="#"
+                                    onclick="document.getElementById('tab-signup').checked=true; window.switchView('signup'); return false;">Sign
+                                    up here</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ============== SIGN UP VIEW ============== -->
+                <div class="view view-signup" id="view-signup">
+                    <div class="form panel signup" aria-labelledby="tab-signup">
+                        <div class="grid-2">
+                            <div class="left-info">
+                                <h3>Join Us Today!</h3>
+                                <p class="helper">Create your account and start your journey</p>
+
+                                <ul class="feature-list">
+                                    <li><span class="dot dot-free"></span> Free forever plan available</li>
+                                    <li><span class="dot dot-secure"></span> Bank‑level security</li>
+                                    <li><span class="dot dot-fast"></span> Lightning fast setup</li>
+                                    <li><span class="dot dot-support"></span> 24/7 customer support</li>
+                                </ul>
+
+                                <div class="quick-social">
+                                    <div class="qs-head">Quick Social Signup</div>
+                                    <div class="qs-grid">
+                                        <button class="qs-btn"><i class="fa-brands fa-google"></i></button>
+                                        <button class="qs-btn"><i class="fa-brands fa-facebook-f"></i></button>
+                                        <button class="qs-btn"><i class="fa-brands fa-x-twitter"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="right-form">
+                                <div class="field-2">
+                                    <label>First Name</label>
+                                    <div class="input small"><input type="text" placeholder="John"></div>
+                                </div>
+                                <div class="field-2">
+                                    <label>Last Name</label>
+                                    <div class="input small"><input type="text" placeholder="Doe"></div>
+                                </div>
+
+                                <div class="field-1">
+                                    <label>Email Address</label>
+                                    <div class="input">
+                                        <i class="fa-regular fa-envelope"></i>
+                                        <input type="email" placeholder="john@example.com">
+                                    </div>
+                                </div>
+
+                                <div class="field-1">
+                                    <label>Phone Number</label>
+                                    <div class="input">
+                                        <i class="fa-solid fa-phone"></i>
+                                        <input type="tel" placeholder="+1 (555) 123‑4567">
+                                        <i class="fa-solid fa-circle-info right"></i>
+                                    </div>
+                                </div>
+
+                                <div class="field-1">
+                                    <label>Create Password</label>
+                                    <div class="input">
+                                        <i class="fa-solid fa-lock"></i>
+                                        <input type="password" placeholder="Create strong password">
+                                        <i class="fa-regular fa-eye right"></i>
+                                    </div>
+                                </div>
+
+                                <div class="field-1">
+                                    <label>Confirm Password</label>
+                                    <div class="input">
+                                        <i class="fa-solid fa-lock"></i>
+                                        <input type="password" placeholder="Confirm your password">
+                                        <i class="fa-regular fa-eye right"></i>
+                                    </div>
+                                </div>
+
+                                <label class="chk">
+                                    <input type="checkbox">
+                                    <span>I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy
+                                            Policy</a></span>
+                                </label>
+
+                                <label class="chk">
+                                    <input type="checkbox">
+                                    <span>Subscribe to our newsletter for updates</span>
+                                </label>
+
+                                <button class="btn-primary big">Create Account</button>
+                            </div>
+                        </div>
+
+                        <p class="small-note">
+                            Already have an account?
+                            <a href="#"
+                                onclick="document.getElementById('tab-signin').checked=true; window.switchView('signin'); return false;">Sign
+                                in here</a>
+                        </p>
+                    </div>
+                </div>
+
+            </div><!-- /views -->
+        </div><!-- /panel-wrap -->
+    </section>
+
+    <!-- Transition controller script -->
+    <script src="src/main.js"></script>
+</body>
+
+</html>
