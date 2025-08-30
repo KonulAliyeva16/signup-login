@@ -1,12 +1,13 @@
-window.addEventListener(d)
-(function () {
+window.addEventListener("DOMContentLoaded", function () {
     const views = document.getElementById('views');
     const vIn = document.getElementById('view-signin');
     const vUp = document.getElementById('view-signup');
     const rIn = document.getElementById('tab-signin');
     const rUp = document.getElementById('tab-signup');
 
-    function setHeight(el) { views.style.height = el.offsetHeight + 'px'; }
+    function setHeight(el) {
+        views.style.height = el.offsetHeight + 'px';
+    }
 
     window.switchView = function (which) {
         const show = which === 'signup' ? vUp : vIn;
@@ -22,7 +23,9 @@ window.addEventListener(d)
     rUp.addEventListener('change', () => window.switchView('signup'));
 
     // init on load + resize
-    function init() { setHeight(document.querySelector('.view.active') || vIn); }
+    function init() {
+        setHeight(document.querySelector('.view.active') || vIn);
+    }
     window.addEventListener('resize', init);
     init();
-})();
+});
