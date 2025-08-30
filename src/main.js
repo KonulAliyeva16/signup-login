@@ -1,4 +1,5 @@
-window.addEventListener("DOMContentLoaded", () => {
+window.addEventListener(d)
+(function () {
     const views = document.getElementById('views');
     const vIn = document.getElementById('view-signin');
     const vUp = document.getElementById('view-signup');
@@ -24,4 +25,4 @@ window.addEventListener("DOMContentLoaded", () => {
     function init() { setHeight(document.querySelector('.view.active') || vIn); }
     window.addEventListener('resize', init);
     init();
-})
+})();
