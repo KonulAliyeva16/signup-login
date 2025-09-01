@@ -14,7 +14,7 @@ Smooth transitions, animated tab slider, glassmorphism effects, and responsive d
 - 🔑 **Reusable SCSS mixins & variables**
 - ⚡ **Pure HTML + SCSS + JS** — no frameworks required
 
----
+--
 
 ## 📂 Project Structure
 
