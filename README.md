@@ -3,7 +3,7 @@
 A modern **Sign In / Sign Up UI** built with **HTML, SCSS, and vanilla JS**.  
 Smooth transitions, animated tab slider, glassmorphism effects, and responsive design — all without external JS frameworks.
 
----
+-
 
 ## ✨ Features
 
